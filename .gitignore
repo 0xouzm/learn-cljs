@@ -11,5 +11,6 @@ pom.xml
 .nrepl-port
 .cpcache/
 .rebel_readline_history
-.clj-kondo
-.lsp
+.clj-kondo/cache/
+.clj-kondo/.cache/
+.lsp/sqlite.*.db
