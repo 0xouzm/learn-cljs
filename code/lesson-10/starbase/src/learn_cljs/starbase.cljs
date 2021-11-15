@@ -14,8 +14,8 @@
 (declare on-answer)
 
 (defn prompt [game current]
-  (let [scene (get game current)
-        type (:type scene)]
+  (let [scene (get game current); {}
+        type (:type scene)] ;start
   (io/clear term)
   (when (or (= :win type)
             (= :lose type))
@@ -25,9 +25,17 @@
                 "Game Over ")))
   (io/println term (:title scene))
   (io/println term (:dialog scene))
-  io/read term #(on-answer game current %)))
+  (io/read term #(on-answer game current %))))
 
-(defn on-answer [game current answer])
+(defn on-answer [game current answer]
+  (println "answer: " answer)
+  (let [scene (get game current)
+        next (if (= :skip (:type scene))
+               (:on-continue scene)
+               (if (= "yes" answer)
+                 (get-in scene [:transitions "yes"])
+                 (get-in scene [:transitions "no"])))]
+    (prompt game next)))
 
 (prompt data/game :start)
 

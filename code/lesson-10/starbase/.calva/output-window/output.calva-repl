@@ -4,6 +4,4 @@
 ; Please see https://calva.io/output/ for more info.
 ; Happy coding! ♥️
 
-; Jacking in...
-; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.8.3"},cider/cider-nrepl {:mvn/version,"0.26.0"},cider/piggieback {:mvn/version,"0.5.2"}}}' -A:fig:build
-; Interrupting Jack-in process.
+; Aborting connect, error determining connect sequence.
