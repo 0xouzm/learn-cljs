@@ -13,4 +13,4 @@ pom.xml
 .rebel_readline_history
 .clj-kondo/cache/
 .clj-kondo/.cache/
-.lsp/sqlite.*.db
+**/.lsp/
