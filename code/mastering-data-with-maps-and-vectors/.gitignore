@@ -11,9 +11,6 @@ pom.xml
 .nrepl-port
 .cpcache/
 .rebel_readline_history
-.clj-kondo/cache/
-.clj-kondo/.cache/
-**/.lsp/
 
 # visual code
 /*.vsix
